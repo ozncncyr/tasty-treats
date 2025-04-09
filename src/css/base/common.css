@@ -1,0 +1,108 @@
+@font-face {
+  font-family: 'Inter';
+  src: url('../../fonts/Inter-Regular.woff2');
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: 'Inter';
+  src: url('../../fonts/Inter-Medium.woff2');
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: 'Inter';
+  src: url('../../fonts/Inter-SemiBold.woff2');
+  font-weight: 600;
+}
+
+:root {
+  /* White Theme */
+  --primary-white-color: #ffffff;
+  --primaty-black-color: #050505;
+  --text-white-color: #f8f8f8;
+  --accent-color: #9bb537;
+  /* Dark Theme */
+  --primary-dark-color: #1e1e1e;
+}
+
+body {
+  font-family: 'Inter';
+  background-color: var(--background);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+  padding: 0;
+}
+
+svg {
+  fill: currentColor;
+  stroke: currentColor;
+}
+
+button {
+  cursor: pointer;
+}
+
+.container {
+  max-width: 375px;
+  padding-left: 20px;
+  padding-right: 20px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media screen and (min-width: 768px) {
+  .container {
+    max-width: 768px;
+    padding-left: 32px;
+    padding-right: 32px;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .container {
+    max-width: 1280px;
+    padding-left: 100px;
+    padding-right: 100px;
+  }
+}
+
+.position-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+@media screen and (min-width: 768px) {
+  .position-wrapper {
+    flex-wrap: wrap;
+    max-height: 1423px;
+
+    align-items: center;
+    column-gap: 32px;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .position-wrapper {
+    column-gap: 64px;
+    max-height: 1244px;
+  }
+}

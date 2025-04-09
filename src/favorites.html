@@ -10,24 +10,24 @@
     />
     <link rel="icon" href="images/favicon.png" type="image/x-icon" />
     <link rel="stylesheet" href="./css/main.css" />
-    <script type="module" src="./index.js"></script>
   </head>
 
   <body>
-    <!-- partials -->
-    <include src="./partials/header.html"></include>
-    <include src="./partials/hero.html"></include>
-    <div class="position-wrapper container">
-      <include src="./partials/all-categories.html"></include>
-      <include src="./partials/popular-recipes.html"></include>
-      <include src="./partials/search.html"></include>
-      <include src="./partials/order-now-modal.html"></include>
-    </div>
+    <include src="./partials/header_favorite.html"></include>
+
+    <main>
+      <include src="./partials/fav_hero.html"></include>
+      <include src="./partials/fav_page_list.html"></include>
+    </main>
 
     <div class="backdrop-recipes is-hidden-modal">
       <include src="./partials/modal-recipes.html"></include>
       <include src="./partials/rating.html"></include>
     </div>
-    <button id="scrollButton" class="scroll-button">&#9650;</button>
+
+    <include src="./partials/order-now-modal.html"></include>
+
+    <script type="module" src="./favorites.js"></script>
+    <script src="./js/utils/switcher.js"></script>
   </body>
 </html>
