@@ -1,8 +1,9 @@
-import { findRecipes, patchRating } from '../service/API';
+import { findRecipes } from '../service/API';
 import { measureRating } from '../renders/renders';
 import { ratingScale } from '../renders/renders';
 import SmoothScrollbar from 'smooth-scrollbar';
 import Notiflix from 'notiflix';
+import { patchRating } from '../service/API';
 
 const refs = {
   closeModalBtn: document.querySelector('.close-modal'),

@@ -13,7 +13,7 @@ export async function fetchCategories() {
     const response = await axios.get(`${API_URL}/categories`);
     return response.data;
   } catch (error) {
-    console.error('Помилка під час отримання категорій:', error);
+    console.error('Error while fetching categories:', error);
     return [];
   }
 }
@@ -47,6 +47,7 @@ export async function fetchIngredientsRecipes() {
 
 export async function patchRating(id, data) {
   const url = `${API_URL}/recipes/${id}/rating`;
+  console.log(url, data);
   return await axios.patch(url, data);
 }
 
