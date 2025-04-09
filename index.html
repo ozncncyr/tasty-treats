@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TastyTreats</title>
+    <link rel="icon" href="/tasty-treats/assets/favicon-DZR_Fp9z.png" type="image/x-icon" />
+    <script type="module" crossorigin src="/tasty-treats/index.js"></script>
+    <link rel="modulepreload" crossorigin href="/tasty-treats/assets/vendor-CsIy9GeN.js">
+    <link rel="modulepreload" crossorigin href="/tasty-treats/assets/switcher-qIC0IYzC.js">
+    <link rel="stylesheet" crossorigin href="/tasty-treats/assets/switcher-DCwYvD8M.css">
+    <link rel="stylesheet" crossorigin href="/tasty-treats/assets/vendor-CXPaOX6l.css">
+  </head>
+
+  <body>
+    <!-- partials -->
+    <header class="header">
+  <div class="container">
+    <nav class="nav-header">
+      <ul class="nav-list">
+        <li class="nav-item">
+          <a class="nav-link current link" href="./index.html">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active link" href="./favorites.html">Favorites</a>
+        </li>
+      </ul>
+      <a class="logo-header link" href="./index.html"
+        >tasty<span class="logo-color">treats.</span></a
+      >
+      <div class="header-btn-box">
+        <a
+          href="#"
+          class="shopping-link link"
+          rel="noopener noreferrer"
+          aria-label="shopping-card"
+        >
+          <svg class="shopping-icon" width="24" height="24">
+            <use href="/tasty-treats/assets/icons-CBmnuM1Z.svg#shopping-icon"></use>
+          </svg>
+        </a>
+        <!-- Burger mobile -->
+        <button
+          class="burger-menu js-open-menu"
+          type="button"
+          aria-expanded="false"
+          aria-controls="mobile-menu"
+        >
+          <svg class="burger-menu-icon" width="32" height="32">
+            <use href="/tasty-treats/assets/icons-CBmnuM1Z.svg#icon-menu"></use>
+          </svg>
+        </button>
+
+        <!-- Toggle -->
+        <script src="./js/utils/switcher.js"></script>
+        <div class="theme-switcher main js-switcher">
+          <input type="checkbox" class="input-switcher" id="switch" /><label
+            class="input-label"
+            for="switch"
+            >Toggle</label
+          >
+        </div>
+      </div>
+    </nav>
+  </div>
+
+  <!-- Mobile window -->
+
+  <div class="menu-container js-menu-container" id="mobile-menu">
+    <button class="menu-toggle js-close-menu">
+      <svg
+        fill="currentColor"
+        viewBox="0 0 20 20"
+        xmlns="http://www.w3.org/2000/svg"
+        width="32"
+        height="32"
+      >
+        <path
+          fill-rule="evenodd"
+          d="M4.293 4.293a1 1 0 011.414 0L10
+          8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0
+          01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10
+          4.293 5.707a1 1 0 010-1.414z"
+          clip-rule="evenodd"
+        ></path>
+      </svg>
+    </button>
+
+    <ul class="mobile-menu">
+      <li class="nav-item-burger">
+        <a class="nav-link current link" href="./index.html">Home</a>
+      </li>
+      <li class="nav-item-burger">
+        <a href="/src/favorites.html" class="nav-link link">Favorites</a>
+      </li>
+
+      <!-- Toggle-switch-burger -->
+      <li class="theme-switcher burger">
+        <input
+          type="checkbox"
+          class="input-switcher"
+          id="mobile-switch"
+        /><label class="input-label" for="mobile-switch"></label>
+      </li>
+    </ul>
+  </div>
+</header>
+
+    <section class="hero-section">
+  <div class="hero">
+    <div class="hero-left container">
+      <h1 class="hero-heading">
+        Learn to Cook
+        <span class="hero-heading-span">Tasty Treats' </span>Customizable
+        Masterclass
+      </h1>
+      <p class="hero-description">
+        TastyTreats - Customize Your Meal with Ingredient Options and
+        Step-by-Step Video Guides.
+      </p>
+      <button id="hero-order-btn" class="hero-order-btn btn-hero" type="button">
+        Order now
+      </button>
+    </div>
+
+    <div class="swiper-container">
+      <div class="swiper">
+        <div class="swiper-wrapper">
+          <!-- слайд 1 -->
+
+          <div class="swiper-slide">
+            <div class="swiper-img">
+              <div class="swiper-master-cook-card first-cook"></div>
+            </div>
+
+            <div class="swiper-img">
+              <div class="swiper-cook-center-card first-cook-center-card"></div>
+            </div>
+
+            <div class="swiper-img">
+              <div class="swiper-cook-big-card first-cook-last-card"></div>
+            </div>
+          </div>
+
+          <!-- слайд 2 -->
+
+          <div class="swiper-slide">
+            <div class="swiper-img">
+              <div class="swiper-master-cook-card second-cook"></div>
+            </div>
+
+            <div class="swiper-img">
+              <div
+                class="swiper-cook-center-card second-cook-center-card"
+              ></div>
+            </div>
+
+            <div class="swiper-img">
+              <div class="swiper-cook-big-card second-cook-last-card"></div>
+            </div>
+          </div>
+
+          <!-- слайд 3 -->
+
+          <div class="swiper-slide">
+            <div class="swiper-img">
+              <div class="swiper-master-cook-card third-cook"></div>
+            </div>
+
+            <div class="swiper-img">
+              <div class="swiper-cook-center-card third-cook-center-card"></div>
+            </div>
+
+            <div class="swiper-img">
+              <div class="swiper-cook-big-card third-cook-last-card"></div>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-pagination"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+    <div class="position-wrapper container">
+      <section
+  class="container-allcategories light-theme-add"
+  id="all-categories-box"
+>
+  <h2 style="display: none">Categories</h2>
+  <button
+    class="button-Allcategories isUse"
+    id="allCategoriesButton"
+    type="button"
+  >
+    All categories
+  </button>
+  <div id="categoriesContainer" class="categories-container">
+    <div class="scroll-content"></div>
+  </div>
+</section>
+
+      <section class="popular-recipes-section">
+  <div class="popular-recipes-container">
+    <h2 class="popular-recipes-title">Popular recipes</h2>
+    <ul class="popular-recipes-list"></ul>
+  </div>
+</section>
+
+      <div class="search-res-container light-theme-add">
+  <section class="input-section">
+    <h2 style="display: none">Search</h2>
+    <div class="wrapper">
+      <div class="search-wrapper">
+        <label for="search-input" class="search-label">Search</label>
+        <div class="search-input-wrapper">
+          <svg class="search-icon" width="15" height="15">
+            <use href="/tasty-treats/assets/sprite-BeXmI9hm.svg#search"></use>
+          </svg>
+          <input
+            type="text"
+            id="search-input"
+            class="search-input"
+            placeholder="Enter Text"
+          />
+          <svg class="cancel-button-input" width="20">
+            <use href="/tasty-treats/assets/sprite-BeXmI9hm.svg#icon-x"></use>
+          </svg>
+        </div>
+      </div>
+    </div>
+    <div>
+      <label class="search-label">Time</label>
+      <select class="list-time list-filter">
+        <option value="">All</option>
+        <option value="5">5 min</option>
+        <option value="10">10 min</option>
+        <option value="15">15 min</option>
+        <option value="20">20 min</option>
+        <option value="25">25 min</option>
+        <option value="30">30 min</option>
+        <option value="35">35 min</option>
+        <option value="40">40 min</option>
+        <option value="45">45 min</option>
+        <option value="50">50 min</option>
+        <option value="55">55 min</option>
+        <option value="60">60 min</option>
+        <option value="65">65 min</option>
+        <option value="70">70 min</option>
+        <option value="75">75 min</option>
+        <option value="80">80 min</option>
+        <option value="85">85 min</option>
+        <option value="90">90 min</option>
+        <option value="95">95 min</option>
+        <option value="100">100 min</option>
+        <option value="105">105 min</option>
+        <option value="110">110 min</option>
+        <option value="115">115 min</option>
+        <option value="120">120 min</option>
+      </select>
+    </div>
+    <div>
+      <label class="search-label">Area</label>
+      <select class="list-area list-filter">
+        <option value="">All</option>
+        <!-- Опції списку областей -->
+      </select>
+    </div>
+    <div>
+      <label class="search-label">Ingredients</label>
+      <select class="list-ingred list-filter">
+        <option value="">All</option>
+        <!-- Опції списку інгредієнтів -->
+      </select>
+    </div>
+
+    <div id="spinner" class="spinner">
+      <div class="spinner-icon"></div>
+    </div>
+  </section>
+
+  <section>
+    <button class="clear-button">
+      <svg class="svg-button-click" width="16" height="16">
+        <use
+          href="/tasty-treats/assets/sprite-BeXmI9hm.svg#icon-x"
+          class="svg-icon-clean-button"
+        ></use>
+      </svg>
+      Reset the filter
+    </button>
+    <h2 style="display: none">Recipes</h2>
+    <div id="image-container" class="image-container"></div>
+    <div id="pagination" class="tui-pagination"></div>
+  </section>
+</div>
+
+      <div class="backdrop-order">
+  <div id="modal-order" class="modal-order">
+    <button type="button" class="order-modal-close-btn">
+      <svg class="order-icon-close" width="20" height="20">
+        <use href="/tasty-treats/assets/sprite-BeXmI9hm.svg#icon-x"></use>
+      </svg>
+    </button>
+    <div class="wrap-recipe">
+      <form action="#" class="modal-form-order" autocomplete="on">
+        <strong class="contact-modal-title">Order now</strong>
+
+        <span class="contact-field-wrapper">
+          <label class="input-box">
+            <input
+              type="text"
+              class="input-field input-field-name input-js"
+              name="name"
+              required
+              pattern="[A-Za-z]{1,32}"
+              placeholder="Your name"
+            />
+            <span class="order-input-label">Name</span>
+            <svg class="input-warning-icon" width="14" height="14">
+              <use class="error" href="/tasty-treats/assets/sprite-BeXmI9hm.svg#icon-error"></use>
+              <use
+                class="correct"
+                href="/tasty-treats/assets/sprite-BeXmI9hm.svg#icon-correct"
+              ></use>
+            </svg>
+          </label>
+
+          <label class="input-box">
+            <input
+              type="tel"
+              class="input-field input-field-tel input-js"
+              name="tel"
+              required
+              pattern="^\+380\d{9}$"
+              placeholder="Your telephone "
+            />
+            <span class="order-input-label">Phone number</span>
+            <svg class="input-warning-icon" width="14" height="14">
+              <use class="error" href="/tasty-treats/assets/sprite-BeXmI9hm.svg#icon-error"></use>
+              <use
+                class="correct"
+                href="/tasty-treats/assets/sprite-BeXmI9hm.svg#icon-correct"
+              ></use>
+            </svg>
+          </label>
+
+          <label class="input-box">
+            <input
+              type="email"
+              class="input-field input-field-tel input-js"
+              name="email"
+              required
+              pattern="[^@\s]+@[^@\s]+"
+              placeholder="Your email "
+            />
+            <span class="order-input-label">Email</span>
+            <svg class="input-warning-icon" width="14" height="14">
+              <use class="error" href="/tasty-treats/assets/sprite-BeXmI9hm.svg#icon-error"></use>
+              <use
+                class="correct"
+                href="/tasty-treats/assets/sprite-BeXmI9hm.svg#icon-correct"
+              ></use>
+            </svg>
+          </label>
+
+          <label class="input-box">
+            <textarea
+              class="input-field input-field-textarea input-js"
+              name="comment"
+              rows="4"
+            ></textarea>
+            <span class="order-input-label">Comment</span>
+            <svg class="input-warning-icon" width="14" height="14">
+              <use class="error" href="/tasty-treats/assets/sprite-BeXmI9hm.svg#icon-error"></use>
+              <use
+                class="correct"
+                href="/tasty-treats/assets/sprite-BeXmI9hm.svg#icon-correct"
+              ></use>
+            </svg>
+          </label>
+        </span>
+
+        <button type="submit" class="order-btn" data-modal="2">Send</button>
+      </form>
+    </div>
+  </div>
+</div>
+
+    </div>
+
+    <div class="backdrop-recipes is-hidden-modal">
+      <div id="scroll-rec" class="modal-recipes is-hidden-modal">
+  <div class="modal-recipes-js"></div>
+  <button class="close-modal">
+    <svg class="close-modal-ico" width="20" height="20">
+      <use href="/tasty-treats/assets/sprite-BeXmI9hm.svg#icon-x"></use>
+    </svg>
+  </button>
+  <div class="scroll-box"></div>
+  <button class="save-recipes-btn">Add to favorite</button>
+  <button class="give-rating-btn">Give a rating</button>
+</div>
+
+      <div class="modal-rating is-hidden-modal backdrop-rating" data-modal>
+  <button class="modal-rating-close-btn close-rating-modal" data-modal-close>
+    <svg class="modal-rating-close-icon" width="24" hight="24">
+      <use href="/tasty-treats/assets/sprite-BeXmI9hm.svg#icon-x"></use>
+    </svg>
+  </button>
+  <b class="modal-rating-title">Rating</b>
+  <div class="modal-rating-star-box">
+    <ul class="modal-rating-list">
+      <li class="modal-rating-star-item">
+        <button type="button" class="modal-rating-star-btn">
+          <svg class="modal-rating-star-icon" width="24" height="24">
+            <use href="/tasty-treats/assets/sprite-BeXmI9hm.svg#star"></use>
+          </svg>
+        </button>
+      </li>
+      <li class="modal-rating-star-item">
+        <button type="button" class="modal-rating-star-btn">
+          <svg class="modal-rating-star-icon" width="24" height="24">
+            <use href="/tasty-treats/assets/sprite-BeXmI9hm.svg#star"></use>
+          </svg>
+        </button>
+      </li>
+      <li class="modal-rating-star-item">
+        <button type="button" class="modal-rating-star-btn">
+          <svg class="modal-rating-star-icon" width="24" height="24">
+            <use href="/tasty-treats/assets/sprite-BeXmI9hm.svg#star"></use>
+          </svg>
+        </button>
+      </li>
+      <li class="modal-rating-star-item">
+        <button type="button" class="modal-rating-star-btn">
+          <svg class="modal-rating-star-icon" width="24" height="24">
+            <use href="/tasty-treats/assets/sprite-BeXmI9hm.svg#star"></use>
+          </svg>
+        </button>
+      </li>
+      <li class="modal-rating-star-item">
+        <button type="button" class="modal-rating-star-btn">
+          <svg class="modal-rating-star-icon" width="24" height="24">
+            <use href="/tasty-treats/assets/sprite-BeXmI9hm.svg#star"></use>
+          </svg>
+        </button>
+      </li>
+    </ul>
+    <form class="modal-rating-form">
+      <label class="modal-rating-formfield">
+        <span class="modal-rating-span">0.0</span>
+        <input
+          type="range"
+          name="raiting-star"
+          min="0"
+          max="5"
+          value="0"
+          class="rating-range-input"
+        />
+      </label>
+      <label class="modal-rating-formfield">
+        <input
+          type="text"
+          name="email"
+          placeholder="Enter email"
+          class="rating-email-input"
+        />
+      </label>
+      <button
+        class="modal-rating-send-btn"
+        type="submit"
+        name="send"
+        disabled="true"
+      >
+        Send
+      </button>
+    </form>
+  </div>
+</div>
+
+    </div>
+    <button id="scrollButton" class="scroll-button">&#9650;</button>
+  </body>
+</html>
