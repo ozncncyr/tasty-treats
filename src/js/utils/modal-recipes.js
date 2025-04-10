@@ -104,8 +104,15 @@ async function SubmitRate(e) {
 
   try {
     await patchRating(id, data);
+    Notiflix.Report.Init({
+      plainText: false,
+    });
+    var message =
+      '1- Bizi değerlendirdiğiniz için teşekkürler. <br>Thank you for appreciating the recipe.';
     Notiflix.Notify.success(
-      'Bizi değerlendirdiğiniz için teşekkürler. <br> Thank you for appreciating the recipe.'
+      'Bizi değerlendirdiğiniz için teşekkürler.',
+      message,
+      'Thank you for appreciating the recipe.'
     );
   } catch (error) {
     Notiflix.Notify.failure(
