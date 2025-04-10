@@ -54,6 +54,12 @@
     margin-bottom: 24px;
     display: flex;
     gap: 16px;
+    transition: transform 300ms ease-in-out;
+}
+
+.popular-recipes-item:hover,
+.popular-recipes-item:focus {
+    transform: scale(1.2);
 }
 
 .popular-recipes-list .popular-recipes-item {

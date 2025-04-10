@@ -86,7 +86,7 @@ function renderItem(title, description, preview, rating, id, category) {
                     <div class='rate-details-box'>
                     <p class='rate'>${fixRating}</p>
                     ${ratingScale(fixRating)}
-                    <button type='button' name='details' class='button item-rec' data-id=${id}>See recipe</button>
+                    <button type='button' name='details' class='see-recipe-btn button item-rec' data-id=${id}>See Recipe</button>
                     </div>
                   </div>
                 </div>`;

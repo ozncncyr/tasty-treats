@@ -225,7 +225,7 @@
 
 @media screen and (min-width: 1280px) {
   .button.item-rec {
-    padding: 8px 16px;
+    padding: 8px 10px;
   }
 }
 
@@ -239,7 +239,7 @@
 }
 
 .favorite-btn.active .heart-icon {
-  fill: #f8f8f8;
+  fill: #d60f0f;
 }
 
 .favorite-list .recipe-item {

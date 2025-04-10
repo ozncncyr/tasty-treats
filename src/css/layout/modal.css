@@ -96,6 +96,13 @@
 .close-modal-ico {
   stroke: var(--primary-color);
   fill: rgba(5, 5, 5, 0.5);
+  transition: scale 100ms ease-in-out, fill 100ms ease-in-out;
+}
+
+.close-modal:hover .close-modal-ico,
+.close-modal:focus .close-modal-ico {
+  fill: var(--primary-color);
+  scale: 1.2;
 }
 
 @media screen and (min-width: 768px) {
@@ -131,6 +138,7 @@
   text-align: center;
   color: var(--text-white-color);
   border: none;
+  transition: all 300ms ease-in-out;
 }
 
 .save-recipes-btn:hover,
@@ -159,6 +167,13 @@ button.give-rating-btn {
   color: var(--primary-black-color);
 
   border: 1px solid var(--accent-color);
+  transition: all 300ms ease-in-out;
+}
+
+button.give-rating-btn:hover,
+button.give-rating-btn:focus {
+  background-color: var(--accent-color);
+  color: var(--primary-white-color);
 }
 
 @media screen and (min-width: 768px) {
