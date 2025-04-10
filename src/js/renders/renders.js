@@ -1,5 +1,6 @@
-import svg from '../../images/sprite.svg';
+import svg from '../../images/sprite.svg'; // DOM'da kullanılmak üzere icon dosya yolunu çağırdık.
 
+// Puanlamada kullanılan yıldızların renkleri - Colors of stars in rating
 export function measureRating(position, pating) {
   if (position <= pating) {
     return 'rate-item-active';
@@ -7,6 +8,7 @@ export function measureRating(position, pating) {
   return 'rate-item';
 }
 
+// LS'de favori tarif kontrolü - Favorite recipe control on LS
 function checkOnFavor(id) {
   const storage = localStorage.getItem('favorites');
   const data = JSON.parse(storage);
@@ -16,6 +18,7 @@ function checkOnFavor(id) {
   return '';
 }
 
+// Puanlamada kullanılan yıldızlar - Stars for rating
 export function ratingScale(rating) {
   return `<ul class='rate-list'>
              <li class=${measureRating(1, rating)}>
@@ -46,6 +49,7 @@ export function ratingScale(rating) {
           </ul>`;
 }
 
+// Tariflerin listelenmesi - Recipes listing
 function renderItem(title, description, preview, rating, id, category) {
   const infoRecipe = {
     title: title,

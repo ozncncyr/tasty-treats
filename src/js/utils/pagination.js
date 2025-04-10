@@ -1,6 +1,7 @@
 import Pagination from 'tui-pagination';
 import 'tui-pagination/dist/tui-pagination.css';
 
+// Çöznürlüğe göre bölüm sayısı
 function resizeVisPage() {
   const screenWidth = window.innerWidth;
 
@@ -13,6 +14,7 @@ function resizeVisPage() {
   }
 }
 
+// Sayfalama - Pagination
 function startPagination(page, perPage, totalPages, callback) {
   const options = {
     totalItems: Number(perPage) * Number(totalPages),
@@ -44,6 +46,7 @@ function startPagination(page, perPage, totalPages, callback) {
 
   const pagination = new Pagination('pagination', options);
 
+  // Sayfa değiştiğinde
   pagination.on('afterMove', ({ page }) => {
     callback(page);
   });

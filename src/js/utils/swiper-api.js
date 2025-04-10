@@ -1,5 +1,6 @@
 import axios from 'axios';
 
+// DOM elemanlarının tanımlanması - DOM elements
 const masterCookCard = document.querySelector('.first-cook');
 const masterCookSecondCard = document.querySelector('.second-cook');
 const masterCookThirdCard = document.querySelector('.third-cook');
@@ -19,6 +20,7 @@ const masterCookThirdSlideLastCard = document.querySelector(
 );
 const EVENTS_URL = 'https://tasty-treats-backend.p.goit.global/api/events';
 
+// Ana sınıfları alır - Fetch main classes
 const events = async () => {
   try {
     const response = await axios.get(`${EVENTS_URL}`);
@@ -28,6 +30,8 @@ const events = async () => {
     console.log(error);
   }
 };
+
+// Ana sınıfları alır - Fetch main classes
 events()
   .then(data => {
     const { cook: firstSlideCook, topic: firstSlideTopic } = data[0];

@@ -7,6 +7,7 @@ import { OpenModal } from '../utils/modal-recipes';
 import { setActiveClass, onClickAllCategoriesButton } from '../utils/scrollbar';
 import { fetchAreaRecipes, fetchIngredientsRecipes } from '../service/API.js';
 
+// DOM elemanlarını tanımlama - DOM elements
 const searchInput = document.querySelector('.search-input');
 export const recipeContainer = document.querySelector('#image-container');
 const paginationBox = document.getElementById('pagination');
@@ -26,21 +27,22 @@ document
     document.querySelector('.list-ingred').value = '';
     onClickAllCategoriesButton(target);
   });
-//Очищення інпуту кнопкою
+
+// İptal Butonu - Cancel Button
 searchInput.addEventListener('input', () => {
   if (searchInput.value.trim() !== '') {
-    cancelButton.style.display = 'inline-block'; // Показати іконку
+    cancelButton.style.display = 'inline-block';
   } else {
-    cancelButton.style.display = 'none'; // Приховати іконку
+    cancelButton.style.display = 'none';
   }
 });
 cancelButton.addEventListener('click', function ({ target }) {
-  searchInput.value = ''; // Очищення поля вводу
-  cancelButton.style.display = 'none'; // Приховати іконку після очищення
+  searchInput.value = '';
+  cancelButton.style.display = 'none';
   onClickAllCategoriesButton(target);
 });
 
-//Search icon chenge color
+// Ara Butonu - Search Button
 const searchIcon = document.querySelector('.search-icon');
 searchInput.addEventListener('focus', () => {
   searchIcon.classList.add('active');
@@ -49,6 +51,7 @@ searchInput.addEventListener('blur', () => {
   searchIcon.classList.remove('active');
 });
 
+// Degiskenler - Variables
 let prevSearch = '';
 let query = '';
 let time = '';
@@ -59,6 +62,7 @@ const DEBOUNCE_DELAY = 300;
 
 searchImagesAndDisplay();
 
+// Favori tarifler - Favorite recipes
 function toggleFavriteRecipe(currentBtn) {
   const recipeInfo = JSON.parse(currentBtn.dataset.info);
 
@@ -74,6 +78,7 @@ function toggleFavriteRecipe(currentBtn) {
   }
 }
 
+// Tarifleri ara - Search recipes
 export function hendleClickOnRecipes({ target }) {
   if (!target.closest('button')) return;
 
@@ -90,6 +95,7 @@ export function hendleClickOnRecipes({ target }) {
 
 recipeContainer.addEventListener('click', hendleClickOnRecipes);
 
+// Filtreler - Filters
 async function generatAreaFiltersMarkup() {
   try {
     const filtersArea = await fetchAreaRecipes();
@@ -99,6 +105,7 @@ async function generatAreaFiltersMarkup() {
   } catch {}
 }
 
+// Filtreler - Filters
 async function generateIngredFiltersMarkup() {
   try {
     const filtersIngred = await fetchIngredientsRecipes();
@@ -109,11 +116,13 @@ async function generateIngredFiltersMarkup() {
   } catch {}
 }
 
+// Alan filtrelerinin oluşturma - Area filters creation
 function createAreaMarkupFilters(ivent) {
   const { name } = ivent;
   return `<option value="${name}">${name}</option>`;
 }
 
+// Malzemeler filtrelerinin oluşturma - Ingredients filters creation
 function createIngredMarkupFilters(ivent) {
   const { name, _id } = ivent;
   return `<option value="${_id}">${name}</option>`;
@@ -144,6 +153,7 @@ const debouncedOnInpit = debounce(onInput, DEBOUNCE_DELAY);
 
 filtersSection.addEventListener('input', debouncedOnInpit);
 
+// Genel Fonksiyonlar
 function onInput(e) {
   const value = e.target.value;
 
@@ -241,18 +251,3 @@ export async function searchImagesAndDisplay(
 export function setSearchQueryName(name = '') {
   query = name;
 }
-
-// function toggleFavriteRecipe(currentBtn) {
-//   const recipeInfo = JSON.parse(currentBtn.dataset.info);
-
-//   currentBtn.classList.toggle('active');
-//   const storage = JSON.parse(localStorage.getItem('favorites')) ?? [];
-//   if (currentBtn.classList.contains('active')) {
-//     localStorage.setItem('favorites', JSON.stringify([...storage, recipeInfo]));
-//   } else {
-//     localStorage.setItem(
-//       'favorites',
-//       JSON.stringify([...storage.filter(el => el.id !== recipeInfo.id)])
-//     );
-//   }
-// }

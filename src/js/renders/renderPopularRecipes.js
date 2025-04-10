@@ -1,9 +1,11 @@
 import { getPopularRecipes } from '../service/API';
 import { OpenModal } from '../utils/modal-recipes';
 
+// Tariflerin render edilmesi - Recipes rendering
 export const popularRecipes = document.querySelector('.popular-recipes-list');
 popularRecipes.addEventListener('click', showPopularRecipeModal);
 
+// Popüler tariflerin render edilmesi - Popular recipes rendering
 async function renderPopularRecipes() {
   try {
     const data = await getPopularRecipes();
@@ -13,6 +15,7 @@ async function renderPopularRecipes() {
   }
 }
 
+// Tariflerin oluşturma - Recipes creation
 function createPopularRecipesList(data) {
   const markup = data
     .map(recipe => {
@@ -31,6 +34,7 @@ function createPopularRecipesList(data) {
 
 renderPopularRecipes();
 
+// Tariflerin modal'a gönderilmesi - Recipes sending to modal
 function showPopularRecipeModal(event) {
   const popularRecipeId = event.target.parentNode;
   OpenModal(popularRecipeId);

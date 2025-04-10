@@ -6,6 +6,7 @@ import Swiper from '../../../node_modules/swiper/swiper-bundle.min.mjs';
 import '../../../node_modules/swiper/swiper-bundle.css';
 import '../../../node_modules/swiper/modules/pagination.min.css';
 
+// Slider oluşturma - Create slider
 new Swiper('.swiper', {
   pagination: {
     el: '.swiper-pagination',

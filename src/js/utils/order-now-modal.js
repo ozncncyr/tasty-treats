@@ -1,6 +1,7 @@
 import Notiflix from 'notiflix';
 import { postOrder } from '../service/API';
 
+// DOM elemanlarının tanımlanması - DOM elements declaration
 const refs = {
   openModalBtn: document.querySelector('.shopping-link'),
   openModalBtnHero: document.querySelector('.btn-hero'),
@@ -9,6 +10,8 @@ const refs = {
   modal: document.querySelector('.modal-order'),
   forma: document.querySelector('.modal-form-order'),
 };
+
+// Tarif modalını açma - Open recipe modal
 try {
   refs.openModalBtnHero.addEventListener('click', openModalOpen);
 } catch (error) {}
@@ -18,6 +21,7 @@ refs.closeModalBtn.addEventListener('click', closeModalClose);
 refs.backdrop.addEventListener('click', clickBackdropClick);
 refs.forma.addEventListener('submit', sendOrder);
 
+// Sipariş gönderme - Send order
 async function sendOrder(e) {
   e.preventDefault();
   const { name, tel, email, comment } = e.currentTarget;
@@ -41,6 +45,7 @@ async function sendOrder(e) {
   }
 }
 
+// Tarif penceresini açma - Open recipe modal
 function openModalOpen() {
   window.addEventListener('keydown', onEscPress);
   document.body.classList.add('overflowHidden');
@@ -48,6 +53,7 @@ function openModalOpen() {
   refs.modal.classList.add('active');
 }
 
+// Tarif penceresini kapatma - Close recipe modal
 function closeModalClose() {
   document.body.classList.remove('overflowHidden');
   window.removeEventListener('keydown', onEscPress);
@@ -56,12 +62,14 @@ function closeModalClose() {
   refs.modal.classList.remove('active');
 }
 
+// Tıklanıldığında tarif penceresini kapatma - Close recipe modal by click
 function clickBackdropClick(e) {
   if (e.currentTarget === e.target) {
     closeModalClose();
   }
 }
 
+// ESC'ye basıldığında tarif penceresini kapatma - Close recipe modal by press ESC
 function onEscPress(e) {
   if (e.code === 'Escape') {
     closeModalClose();

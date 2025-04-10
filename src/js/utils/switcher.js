@@ -1,3 +1,6 @@
+// Tema Çevirici - Theme switcher
+
+// Temayı local storage'den al - Get theme from local storage
 function setThemeFromLocalStorage() {
   const storedTheme = localStorage.getItem('theme');
   const userPreferredTheme = window.matchMedia('(prefers-color-scheme: dark)')
@@ -12,6 +15,7 @@ function setThemeFromLocalStorage() {
   });
 }
 
+// Temayı çevir - Switch theme
 function toggleTheme() {
   const currentTheme = document.documentElement.getAttribute('data-theme');
   const targetTheme = currentTheme === 'light' ? 'dark' : 'light';

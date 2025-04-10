@@ -5,6 +5,7 @@ import SmoothScrollbar from 'smooth-scrollbar';
 import Notiflix from 'notiflix';
 import { patchRating } from '../service/API';
 
+// DOM öğelerinin tanımlanması - DOM elements declaration
 const refs = {
   closeModalBtn: document.querySelector('.close-modal'),
   backdropModal: document.querySelector('.backdrop-recipes'),
@@ -23,6 +24,7 @@ const refs = {
   sendRateBtn: document.querySelector('.modal-rating-send-btn'),
 };
 
+// Açılır pencere - Modal
 export function OpenModal(currentBtn) {
   refs.closeModalBtn.addEventListener('click', CloseModal);
   refs.backdropModal.addEventListener('click', CloseOnClick);
@@ -49,6 +51,7 @@ export function OpenModal(currentBtn) {
   refs.saveRecipeBtn.addEventListener('click', AddToFav);
 }
 
+// Puanlama penceresinin açılışı - Opening rating modal
 function OpenRateModal() {
   refs.mainModalRecipes.classList.add('is-hidden-modal');
   refs.rateModal.classList.remove('is-hidden-modal');
@@ -59,6 +62,7 @@ function OpenRateModal() {
   refs.rateForm.addEventListener('submit', SubmitRate); //4
 }
 
+// Puanlama - Rating
 function GiveRate(e) {
   const target = e.target.closest('.modal-rating-star-item');
 
@@ -73,6 +77,8 @@ function GiveRate(e) {
     refs.rateRage.value = rate;
   }
 }
+
+// E-posta giriş kontrolü - Email input control
 function isValidEmail(email) {
   const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
   return regex.test(email);
@@ -87,6 +93,7 @@ function checkRateInputs() {
   }
 }
 
+// Puanlama gönderme - Submit rating
 async function SubmitRate(e) {
   e.preventDefault();
   const data = {
@@ -107,6 +114,7 @@ async function SubmitRate(e) {
   CloseModal();
 }
 
+// Varsayılana dönme - Reset
 function restoreForm() {
   [...refs.modalRateList.children].forEach(el =>
     el.classList.remove('is-rated')
@@ -119,6 +127,7 @@ function restoreForm() {
   refs.rateForm.reset();
 }
 
+// Puanlama penceresini kapatma - Close rating modal
 function CloseRateModal() {
   refs.mainModalRecipes.classList.remove('is-hidden-modal');
   refs.rateModal.classList.add('is-hidden-modal');
@@ -129,6 +138,7 @@ function CloseRateModal() {
   refs.rateForm.addEventListener('submit', SubmitRate); //4
 }
 
+// Açılır pencereyi kapatma - Close modal
 function CloseModal() {
   removeListeners();
   restoreForm();
@@ -147,8 +157,7 @@ function CloseOnBtnClick(e) {
   if (e.key === 'Escape') CloseModal();
 }
 
-// bild the page
-
+// Sayfayı oluştur - Build page
 async function genereteRecipe(id) {
   try {
     const recipe = await findRecipes(id);
@@ -172,6 +181,8 @@ async function genereteRecipe(id) {
     console.error(err);
   }
 }
+
+// İçeriğin oluşturma - Create markup
 function CreateMarkup(data) {
   const ingr = data.ingredients;
   const src = !data.youtube
@@ -214,6 +225,7 @@ function CreateMarkup(data) {
   return markup;
 }
 
+// Kaydırma ekleme - Add scrollbar
 function addScrollbarText() {
   const scrollbarBox = document.querySelector('.recipe-instr');
   const scrollbar = SmoothScrollbar.init(scrollbarBox, {
@@ -225,14 +237,19 @@ function addScrollbarText() {
     alwaysShowTracks: true,
   });
 }
+
+// Veri ekleme - Add data
 function addData(markup) {
   refs.modalRecipes.insertAdjacentHTML('afterbegin', markup);
 }
+
+// İçerik gizleme - Hide content
 function ToggleScroll() {
   const body = document.querySelector('body');
   body.classList.toggle('overflow-hidden');
 }
 
+// Kaynak kontrol - Source control
 function checkSrc(url, description) {
   if (url.endsWith('.jpg')) {
     return `<img class="modal-img" src="${url}" alt="${description}">`;
@@ -246,6 +263,7 @@ function checkSrc(url, description) {
   }
 }
 
+// Favorilere ekleme - Add to favorites
 export function AddToFav({ target }) {
   const storage = localStorage.getItem('favorites');
   const data = JSON.parse(storage);
@@ -268,11 +286,11 @@ export function AddToFav({ target }) {
 }
 
 function removeListeners() {
-  // Main Modal
+  // Tarif penceresi - Recipes Modal
   refs.closeModalBtn.removeEventListener('click', CloseModal);
   refs.backdropModal.removeEventListener('click', CloseOnClick);
   refs.saveRecipeBtn.removeEventListener('click', AddToFav);
-  // Rating Modal
+  // Puanlama penceresi - Rating Modal
   refs.giveRatingBtn.removeEventListener('click', OpenRateModal);
   refs.closeRate.removeEventListener('click', CloseRateModal);
 

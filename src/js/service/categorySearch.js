@@ -2,6 +2,7 @@ import axios from 'axios';
 
 const BASE_URL = 'https://tasty-treats-backend.p.goit.global/api/recipes';
 
+// Çöznürlüğe göre bölüm sayısı - Resize page by screen width
 function resizePage() {
   const screenWidth = window.innerWidth;
 
@@ -35,6 +36,7 @@ export async function searchOnTitle(
   }
 }
 
+// Kategoriye göre tarifleri ara - Search recipes by category
 export async function searchOnCategory(searchQuery, page) {
   const apiUrl = `${BASE_URL}?category=${searchQuery}&page=${page}&${resizePage()}`;
 
