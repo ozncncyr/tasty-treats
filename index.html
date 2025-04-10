@@ -13,8 +13,10 @@
   </head>
 
   <body>
-    <!-- partials -->
-    <header class="header">
+    <!-- Header & Hero -->
+    <!-- AnaSayfa Başlık / Homepage Header -->
+
+<header class="header">
   <div class="container">
     <nav class="nav-header">
       <ul class="nav-list">
@@ -39,7 +41,7 @@
             <use href="/tasty-treats/assets/icons-CBmnuM1Z.svg#shopping-icon"></use>
           </svg>
         </a>
-        <!-- Burger mobile -->
+        <!-- Mobile Menu / Mobil Menü -->
         <button
           class="burger-menu js-open-menu"
           type="button"
@@ -64,7 +66,7 @@
     </nav>
   </div>
 
-  <!-- Mobile window -->
+  <!-- Mobile Windov - Telefon Ekranı -->
 
   <div class="menu-container js-menu-container" id="mobile-menu">
     <button class="menu-toggle js-close-menu">
@@ -94,7 +96,7 @@
         <a href="./favorites.html" class="nav-link link">Favorites</a>
       </li>
 
-      <!-- Toggle-switch-burger -->
+      <!-- Toggle Switch Mobile Menu / Mobil Menü Tetikleme -->
       <li class="theme-switcher burger">
         <input
           type="checkbox"
@@ -106,7 +108,9 @@
   </div>
 </header>
 
-    <section class="hero-section">
+    <!-- AnaSayfa Hero / Homepage Hero -->
+
+<section class="hero-section">
   <div class="hero">
     <div class="hero-left container">
       <h1 class="hero-heading">
@@ -126,7 +130,7 @@
     <div class="swiper-container">
       <div class="swiper">
         <div class="swiper-wrapper">
-          <!-- слайд 1 -->
+          <!-- Slider Part 1 -->
 
           <div class="swiper-slide">
             <div class="swiper-img">
@@ -142,7 +146,7 @@
             </div>
           </div>
 
-          <!-- слайд 2 -->
+          <!-- Slider Part 2 -->
 
           <div class="swiper-slide">
             <div class="swiper-img">
@@ -160,7 +164,7 @@
             </div>
           </div>
 
-          <!-- слайд 3 -->
+          <!-- Slider Part 3 -->
 
           <div class="swiper-slide">
             <div class="swiper-img">
@@ -182,8 +186,12 @@
   </div>
 </section>
 
+
+    <!-- Ana İçerik / Main Contents -->
     <div class="position-wrapper container">
-      <section
+      <!-- AnaSayfa Tüm Kategoriler / Homepage All Categories -->
+
+<section
   class="container-allcategories light-theme-add"
   id="all-categories-box"
 >
@@ -200,14 +208,18 @@
   </div>
 </section>
 
-      <section class="popular-recipes-section">
+      <!-- AnaSayfa Popüler Tarifler / Homapage Popular Recipes -->
+
+<section class="popular-recipes-section">
   <div class="popular-recipes-container">
     <h2 class="popular-recipes-title">Popular recipes</h2>
     <ul class="popular-recipes-list"></ul>
   </div>
 </section>
 
-      <div class="search-res-container light-theme-add">
+      <!-- AnaSayfa Arama / Homepage Search -->
+
+<div class="search-res-container light-theme-add">
   <section class="input-section">
     <h2 style="display: none">Search</h2>
     <div class="wrapper">
@@ -229,6 +241,7 @@
         </div>
       </div>
     </div>
+    <!-- Süre Filtresi / Time Filter -->
     <div>
       <label class="search-label">Time</label>
       <select class="list-time list-filter">
@@ -259,18 +272,18 @@
         <option value="120">120 min</option>
       </select>
     </div>
+    <!-- Mutfak Listesi / List of Areas -->
     <div>
       <label class="search-label">Area</label>
       <select class="list-area list-filter">
         <option value="">All</option>
-        <!-- Опції списку областей -->
       </select>
     </div>
+    <!-- Malzeme Listesi / List of Ingredients -->
     <div>
       <label class="search-label">Ingredients</label>
       <select class="list-ingred list-filter">
         <option value="">All</option>
-        <!-- Опції списку інгредієнтів -->
       </select>
     </div>
 
@@ -295,7 +308,9 @@
   </section>
 </div>
 
-      <div class="backdrop-order">
+      <!-- Sipariş Popup / Order Now Modal -->
+
+<div class="backdrop-order">
   <div id="modal-order" class="modal-order">
     <button type="button" class="order-modal-close-btn">
       <svg class="order-icon-close" width="20" height="20">
@@ -389,8 +404,11 @@
 
     </div>
 
+    <!-- Modals/Popups -->
     <div class="backdrop-recipes is-hidden-modal">
-      <div id="scroll-rec" class="modal-recipes is-hidden-modal">
+      <!-- Tarif Detayları Popup / Recipe Details Modal -->
+
+<div id="scroll-rec" class="modal-recipes is-hidden-modal">
   <div class="modal-recipes-js"></div>
   <button class="close-modal">
     <svg class="close-modal-ico" width="20" height="20">
@@ -402,7 +420,9 @@
   <button class="give-rating-btn">Give a rating</button>
 </div>
 
-      <div class="modal-rating is-hidden-modal backdrop-rating" data-modal>
+      <!-- Puanlama Popup / Rating Modal -->
+
+<div class="modal-rating is-hidden-modal backdrop-rating" data-modal>
   <button class="modal-rating-close-btn close-rating-modal" data-modal-close>
     <svg class="modal-rating-close-icon" width="24" hight="24">
       <use href="/tasty-treats/assets/sprite-BeXmI9hm.svg#icon-x"></use>
@@ -480,6 +500,6 @@
 </div>
 
     </div>
-    <button id="scrollButton" class="scroll-button">&#9650;</button>
+    <button id="scrollButton" class="scroll-button">&#9650;</button>
   </body>
 </html>
