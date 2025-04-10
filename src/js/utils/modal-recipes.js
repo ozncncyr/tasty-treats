@@ -104,7 +104,9 @@ async function SubmitRate(e) {
 
   try {
     await patchRating(id, data);
-    Notiflix.Notify.success('Thank you for appreciating the recipe.');
+    Notiflix.Notify.success(
+      'Bizi değerlendirdiğiniz için teşekkürler. \nThank you for appreciating the recipe.'
+    );
   } catch (error) {
     Notiflix.Notify.failure(
       error.response.data.message || 'Rating has not been submited...'
