@@ -1,12 +1,3 @@
-/* --primary-color
---background-menu
---primary-color-03
---primary-color-05
- --primary-color-02
- --primary-color-01
- --background-mob-menu
-*/
-
 :root[data-theme='light'] {
     --primary-color: #050505;
     --primary-color-08: rgba(5, 5, 5, 0.8);
@@ -25,6 +16,7 @@
     --border-pag: #9bb537;
     --background-menu: #fff;
     --option-color: #fff;
+    transition: all 250ms ease-in-out;
 }
 
 :root[data-theme='dark'] {
@@ -45,6 +37,7 @@
     --border-pag: #9bb537;
     --background-menu: #050505;
     --option-color: #050505;
+    transition: all 250ms ease-in-out;
 }
 
 #pagination .move-button {

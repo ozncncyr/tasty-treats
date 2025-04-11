@@ -1,0 +1,47 @@
+.footer {
+    margin-top: 80px;
+    padding-bottom: 4px;
+}
+
+@media screen and (min-width: 768px) {
+    .footer {
+        margin-top: 100px;
+    }
+}
+
+.footer-copy {
+    display: block;
+
+    @media screen and (max-width: 767px) {
+        margin-bottom: 9px;
+    }
+
+    @media screen and (min-width: 768px) {
+        display: inline-block;
+    }
+}
+
+.footer {
+    @media screen and (min-width: 768px) {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+.footer-copy{
+    color: var(--accent-color);
+}
+
+
+.footer-copy:hover{
+    color: orange;
+}
+
+.footer-copy::after{
+    content: '💚 GoIT Students 💚';
+}
+
+.footer-copy:hover::after{
+    content: '🧡 GoIT Students 🧡';
+}

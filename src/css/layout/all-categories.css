@@ -183,4 +183,5 @@ button.isUse {
 
 .recipe-item .see-recipe-btn:hover, .recipe-item .see-recipe-btn:focus{
   background-color: rgb(183, 216, 53);
+  color: black;
 }
