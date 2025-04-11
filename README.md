@@ -6,17 +6,17 @@ Biz, sekiz farklı yetenek ve karakterin bir araya geldiği dinamik bir ekibiz! 
 
 | Üye     | Rol                |
 |---------|--------------------|
-| Ozan C     | Backend Developer  |
-| Beyza    | UI/UX Designer     |
-| Ahmet  | Full-stack Developer |
-| İdil   | Proje Yöneticisi   |
-| Soner   | Frontend Developer |
-| Berkan     | Veri Bilimci       |
-| M Hakan   | QA Test Uzmanı     |
-| Aleyna   | DevOps Uzmanı      |
+| Ozan C     | Scrum Master - Main Scripter  |
+| Beyza    | Team Lead - Content Maker     |
+| Ahmet  | PopUps Maker |
+| İdil   | Content Scripter   |
+| Soner   | FS Dev - Fav Page Scripter |
+| Berkan     | Content & Design       |
+| M Hakan   | Fav Page Scripter     |
+| Aleyna   | Content Scripter      |
 
 ## 🌟 **Vizyonumuz**
-Teknolojiyle sınırları aşmak ve dünyayı daha iyi bir yer haline getirmek için yaratıcı çözümler sunmak.
+İhtiyaçlar doğrultusunda, en yüksek ve etkin talepler alacak içerikler ve projeler oluşturmak.
 
 ## 🎯 **Misyonumuz**
 - Kullanıcı dostu teknolojiler geliştirmek.
@@ -24,11 +24,6 @@ Teknolojiyle sınırları aşmak ve dünyayı daha iyi bir yer haline getirmek i
 - Toplum üzerinde pozitif bir etki yaratmak.
 
 ## 🔧 **Proje Detayları**
-- **Proje Başlığı:** [Proje Adı]
-- **Teknolojiler:** [Kullandığınız Teknolojiler]
-- **Açıklama:** [Projenizin kısa tanıtımı]
-
-## 🚀 **Kurulum ve Kullanım**
-1. Projeyi klonlayın:
-   ```bash
-   git clone https://github.com/username/repository.git
+- **Proje Başlığı:** Tasty Treats
+- **Teknolojiler:** HTML5 - CSS3 - JavaScript - Vite - Axios - Notiflix - Lodash - Swiper - Tui Pagination - Figma - VS Code - Discord - Trello - Git - GitHub - Google Meet - LMS
+- **Açıklama:** Tasty Treats Yemek Tarifleri ve Online Sipariş
