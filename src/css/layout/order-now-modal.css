@@ -99,7 +99,6 @@
     margin-bottom: 40px;
 }
 
-/* ///////////////// */
 @media screen and (min-width: 768px) {
     .modal-order {
         width: 440px;
@@ -141,7 +140,7 @@
     font-size: 14px;
     line-height: calc(15 / 12);
     padding: 9px 26px 9px 11px;
-    color: var(--primaty-color);
+    color: orange;
     background-color: var(--background-menu);
     width: 100%;
     outline: none;
@@ -153,7 +152,7 @@
 }
 
 .input-field::placeholder {
-    color: var(--primaty-black-color);
+    color: rgba(155, 181, 55, 0.7) !important;
 }
 
 .input-field:focus,
