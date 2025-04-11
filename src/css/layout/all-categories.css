@@ -148,7 +148,7 @@ button.isUse {
 .scroll-button:hover,
 .scroll-button:focus {
   background-color: #9bb537;
-  box-shadow: 0px 10px 20px 5px rgba(0, 0, 0, 0.5);
+  box-shadow: 0px 0px 20px 5px rgba(0, 0, 0, 0.5);
   transform: scale(0.95);
 }
 

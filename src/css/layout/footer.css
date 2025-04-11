@@ -38,10 +38,22 @@
     color: orange;
 }
 
-.footer-copy::after{
+.footer-btn{
+    color: var(--accent-color);
+    background-color: transparent;
+    border: none;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.footer-btn:hover .footer-copy, .footer-btn:hover, .footer-copy:hover .footer-btn{
+    color: orange;
+}
+
+.footer-btn::after{
     content: '💚 GoIT Students 💚';
 }
 
-.footer-copy:hover::after{
+.footer-btn:hover::after, .footer-copy:hover .footer-btn::after{
     content: '🧡 GoIT Students 🧡';
 }
